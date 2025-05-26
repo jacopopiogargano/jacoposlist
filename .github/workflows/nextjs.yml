@@ -63,10 +63,8 @@ jobs:
 
       - name: Build & Export
         run: |
-          # build your app
           ${{ steps.detect-pm.outputs.runCmd }} build
-          # export to /out for GitHub Pages
-          ${{ steps.detect-pm.outputs.manager }} run export
+
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
