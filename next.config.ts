@@ -15,7 +15,7 @@ const nextConfig: NextConfig = {
 
   // 3. ensure paths work on GitHub Pages
   basePath: isProd ? repoName : '',
-  assetPrefix: isProd ? repoName : '',
+  assetPrefix: isProd ? `${repoName}/` : '',
   trailingSlash: true,
 }
 
