@@ -21,7 +21,7 @@ jobs:
       run:
         # if your app isn’t at the repo root,
         # adjust this path
-        working-directory: ./jacoposlist
+        working-directory: ./
 
     steps:
       - uses: actions/checkout@v4
@@ -47,7 +47,7 @@ jobs:
         with:
           node-version: '20'
           cache: ${{ steps.detect-pm.outputs.manager }}
-          cache-dependency-path: ${{ steps.detect-pm.outputs.manager == 'yarn' && 'jacoposlist/yarn.lock' || 'jacoposlist/package-lock.json' }}
+          cache-dependency-path: ${{ steps.detect-pm.outputs.manager == 'yarn' && 'yarn.lock' || 'package-lock.json' }}
 
 
       - name: Restore Next.js cache
@@ -69,7 +69,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: jacoposlist/out
+          path: ./out
 
   deploy:
     needs: build
