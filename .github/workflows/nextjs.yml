@@ -45,10 +45,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: '20'
           cache: ${{ steps.detect-pm.outputs.manager }}
-          # if your lockfile lives in a subfolder, tell setup-node where:
-          cache-dependency-path: jacoposlist/${{ steps.detect-pm.outputs.manager }}.lock
+          cache-dependency-path: ${{ steps.detect-pm.outputs.manager == 'yarn' && 'jacoposlist/yarn.lock' || 'jacoposlist/package-lock.json' }}
+
 
       - name: Restore Next.js cache
         uses: actions/cache@v4
