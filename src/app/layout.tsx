@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <nav className="max-w-7xl mx-auto px-4 flex items-center justify-center h-16 space-x-8">
             {/* Logo: replace '/logo.png' with your image */}
             <Link href="/" className="flex-shrink-0">
-              <Image src="/img/logo.jpg" alt="Logo" width={40} height={40} />
+              <Image src="./img/logo.jpg" alt="Logo" width={40} height={40} />
             </Link>
             <div className="flex space-x-8 text-sm font-medium">
               <Link href="/workout" className="hover:underline">
