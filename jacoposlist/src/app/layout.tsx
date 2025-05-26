@@ -13,13 +13,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="font-sans">
       <body className="bg-white text-black antialiased">
-        <header className="fixed top-0 w-full bg-white border-b z-50">
-          <nav className="max-w-7xl mx-auto px-4 flex items-center h-16">
+        <header className="fixed top-0 w-full bg-white z-50">
+          <nav className="max-w-7xl mx-auto px-4 flex items-center justify-center h-16 space-x-8">
             {/* Logo: replace '/logo.png' with your image */}
             <Link href="/" className="flex-shrink-0">
-              <Image src="/img/logo.jpg" alt="Logo" width={30} height={30} />
+              <Image src="/img/logo.jpg" alt="Logo" width={40} height={40} />
             </Link>
-            <div className="ml-auto flex space-x-8 text-sm font-medium">
+            <div className="flex space-x-8 text-sm font-medium">
               <Link href="/workout" className="hover:underline">
                 Workout
               </Link>
