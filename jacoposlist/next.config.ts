@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  images: {
+    remotePatterns:  [new URL('https://www.google.com/**'),
+    new URL('https://en.wikipedia.org/**')]
+  },
+  // …any other NextConfig options
+}
 
-export default nextConfig;
+export default nextConfig
