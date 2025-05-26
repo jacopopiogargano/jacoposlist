@@ -1,11 +1,23 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  // enable `next export`
+  output: 'export',
+
   images: {
-    remotePatterns:  [new URL('https://www.google.com/**'),
-    new URL('https://en.wikipedia.org/**')]
-  },
-  // …any other NextConfig options
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'www.google.com',
+        pathname: '/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'en.wikipedia.org',
+        pathname: '/**'
+      }
+    ]
+  }
 }
 
 export default nextConfig
